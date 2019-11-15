@@ -1,0 +1,148 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+a{
+  color: black;
+}
+body, html, #root{
+  height: 100%;
+  width: 100%;
+}
+
+.button-basic{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 85px;
+  border-radius: 5px;
+  line-height: 45px;
+}
+
+.container{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+    .main{
+      flex: 1;
+
+      .profile-btn{
+        padding: 10px;
+
+        .active{
+          color: white;
+        }
+        .login{
+          @extend .button-basic;
+          background-color: #5cb85c;
+          margin-left: 30px;
+        }
+        .user{
+          @extend .button-basic;
+          margin-left: 80px;
+          background-color: #1890ff;
+        }
+      }
+      
+      .profile-user{
+        padding: 10px;
+
+          input{
+            display: inline-block;
+            border: 1px solid #d9d9d9;
+            width: 200px;
+            height: 25px;
+            border-radius: 4px;
+            background-color: #fff;
+            line-height: 1.5;
+            font-size: 14px;
+            padding: 4px 11px;
+            list-style: none;
+            transition: all .3s;
+            color: rgba(0,0,0,0.65);
+            font-variant: tabular-nums;
+            outline-color: #1890ff;
+            margin-top: 10px;
+          }
+
+          .ver{
+            margin-top: 10px;
+            width: 140px;
+            height: 50px;
+            border: 1px solid #ccc;
+          }
+
+          .btn{
+            display: inline-block;
+            color: white;
+            text-align: center;
+            width: 85px;
+            border-radius: 5px;
+            height: 45px;
+            background-color: #1890ff;
+          }
+      }
+
+      .profile-login{
+        @extend .profile-user
+      }
+
+      .toast{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        li{
+          color: white;
+          border-radius: 4px;
+          background: rgba($color: #000000, $alpha: .8);
+          margin: 5px;
+          width: 250px;
+          line-height: 46px;
+          text-align: center;
+        }
+      }
+
+      .push-info{
+        @extend .profile-user;
+
+        #push-text{
+          margin-top: 10px;
+          border: 1px solid black;
+          width: 100%;
+          font-size: 16px;
+        }
+        
+      }
+
+      .detail-img{
+        width: 300px;
+      }
+      
+    }
+
+    .tab-bar{
+      height: 3.0625rem;
+      display: flex;
+      background-color: #eee;
+      align-items: center;
+      text-align: center;
+      
+        div{
+          flex: 1;
+          
+          a{
+            display: flex;
+            flex-direction: column;
+          }
+
+          .active{
+            color: orangered;
+          }
+        }
+    }
+}
